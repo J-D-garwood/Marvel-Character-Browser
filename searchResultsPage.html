@@ -4,60 +4,76 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Marvel Character Browser</title>
-    <link rel="stylesheet" href="./assets/style.css">
+    <link rel="stylesheet" href="./assets/css/styles.css">
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
+<div class=" bg-cover bg-center bg-no-repeat bg-[url('./assets/images/bg-image.jpg')]">
 <body>
-    <div id="title-container">
-        <h1 id="title">Marvel Characters</h1>
-    </div>
+    <div id="title-container" class="p-4 rounded-lg mb-8 items-center justify-center text-center">
+        <h1 id="title" class="text-4xl font-bold text-white text-shadow-red">Marvel Characters</h1>
+        
+    
 
+        <div class="grid grid-cols-1 gap-4">
+            <div id="search-container" class="flex flex-col items-start p-4">
+                <!-- Search bar -->
+                <form id="form" class="flex">
+                    <input type="search" id="query" class="border border-red-500 px-4 py-2 rounded-md bg-white text-black font-bold mb-4 mr-2 search-input">
+                    <button type="submit" id="search-button" class="border border-red-500 hover:bg-red-500 hover:text-white px-4 py-2 rounded-md bg-white text-black font-bold search-button">Search</button>
+                </form>
+            </div>
+        
+        
 
-    <div id="search-container"> <!--Search bar-->
-            <form id="form">
-                <label for="Character" class="form-label">Search for a Character!:</label>
-                <input type="text" placeholder="Spiderman" id="userInput" name="Character" />
-                <button type="submit" id="searchBtn" class="btn">Search</button>
-            </form>
-    </div>
-       
-
-    <div id="recent-container">     <!--5 recent searches here, need to dynamically create search results in JS-->
-        <h2>Recent Searches:</h2>
-            <div class="last-search">
-                <div class="userInput"></div>
-            </div>
-            <div class="last-search">
-                <div class="userInput"></div>
-            </div>
-            <div class="last-search">
-                <div class="userInput"></div>
-            </div>
-            <div class="last-search">
-                <div class="userInput"></div>
-            </div>
-            <div class="last-search">
-                <div class="userInput"></div>
-            </div>
+    <div id="myModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <p>Please enter a search query.</p>
         </div>
     </div>
-
-    <div id="wikipedia-display">  <!--For the wiki?-->
-        <h3>Content here</h3>
-    </div>
-
-    <div id="search-results-container"> <!--We can put our search results in the list here?-->
+    <div id="search-results-container" class="m-4 p-4 border border-red-500 px-4 py-2 rounded-md bg-white text-black font-bold w-80">
+        <!-- We can put our search results in the list here? -->
+        <h4>Your search results here</h4>
         <ul>
-            <li>List Item 1</li>
-            <li>List Item 2</li>
-            <li>List Item 3</li>
-            <li>List Item 4</li>
-            <li>List Item 5</li>
+          <li>List Item 1</li>
+          <li>List Item 2</li>
+          <li>List Item 3</li>
+          <li>List Item 4</li>
+          <li>List Item 5</li>
         </ul>
+      </div>
+
+
+   
+    <div id="recent-container" class="m-4 p-4 border border-red-500 px-4 rounded-md bg-white text-black font-bold w-80 font-bold">
+      <!-- 5 recent searches here, need to dynamically create search results in JS -->
+      <h2>Recent Searches:</h2>
+      <div class="last-search">
+        <div class="userInput"></div>
+        <p>Help me</p>
+      </div>
+      <div class="last-search">
+        <div class="userInput"></div>
+      </div>
+      <div class="last-search">
+        <div class="userInput"></div>
+      </div>
+      <div class="last-search">
+        <div class="userInput"></div>
+      </div>
+      <div class="last-search">
+        <div class="userInput"></div>
+      </div>
     </div>
-
-
-
-    <script src="./assets/script.js"></script>
+    <div class="flex justify-end">
+        <div id="wikipedia-display" class="m-4 p-4 border border-red-500 inline-block bg-white font-bold">
+            <p id="wiki-extract">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Tenetur adipisci dolorem molestiae quas sapiente alias, delectus quo magni ipsa! Animi nisi dolores, aliquam non at voluptates cupiditate reprehenderit culpa laudantium?</p>
+            <a id="full-wiki-link" href="#" target="_blank" style="display: none;">Read Full Article</a>
+        </div>
+    
+    
+    
+</div>
 </body>
+</div>
 </html>
