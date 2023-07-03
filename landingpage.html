@@ -10,23 +10,17 @@
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
 
-
-<div class="h-screen bg-cover bg-center bg-no-repeat bg-[url('./assets/images/bg-image.jpg')]">
-  <!-- Content goes here --><body class="text-center">
-  <div id="title-container" class="p-4 rounded-lg mb-8 mt-300 items-center justify-center">
-    <h1 id="title" class="text-4xl font-bold text-white text-red-500 text-outline-2">Marvel Characters</h1>
-  </div>
-  <form id="form" class="h-screen flex flex-col items-center"> 
-    <div class="flex">
-      <input type="search" id="query" class="border border-red-500 px-4 py-2 rounded-md bg-white text-black font-bold mb-4 mr-2 h-full">
-      <!-- Search bar -->
-      <button type="submit" id="search-button" class="border border-red-500 hover:bg-red-500 hover:text-white px-4 py-2 rounded-md bg-white text-black font-bold">Search</button>
+<div class=" bg-cover bg-center bg-no-repeat bg-[url('./assets/images/bg-image.jpg')]">
+  <body class="text-center">
+    <div id="title-container" class="p-4 rounded-lg mb-8 items-center justify-center">
+      <h1 id="title" class="text-4xl font-bold text-white text-shadow-red">Marvel Characters</h1>
     </div>
-  </form>
-</body>
+    <form id="form" class="h-screen flex flex-col items-center"> 
+      <div class="flex">
+        <input type="search" id="query" class="border border-red-500 px-4 py-2 rounded-md bg-white text-black font-bold mb-4 mr-2 h-full flex-grow">
+        <!-- Search bar -->
+        <button type="submit" id="search-button" class="border border-red-500 hover:bg-red-500 hover:text-white px-4 py-2 rounded-md bg-white text-black font-bold flex-none">Search</button>
+      </div>
+    </form>
+  </body>
 </div>
-
-</html>
-
-</body>
-</html>
