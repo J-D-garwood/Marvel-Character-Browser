@@ -129,7 +129,7 @@ function Search_Comics(event) {
             currentComicImg.src = thumbnailUrl
             currentComicImg.alt = comic.title;
           } else {
-            currentComicImg.src = "/C:/Users/garwo/bootcamp/Marvel-Character-Browser/assets/images/dummy_550x834_ffffff_808080_comic-not-found.jpg"
+            currentComicImg.src = "assets/images/dummy_550x834_ffffff_808080_comic-not-found.jpg"
             currentComicImg.alt = comic.title;
             console.log(currentComicImg.src)
           }
@@ -239,4 +239,4 @@ clearRecentBtn.addEventListener('click', function () {
   lastSearches.forEach(function (lastSearch) {
     lastSearch.remove();
   });
-});
+
