@@ -81,3 +81,30 @@
   background: red;
   letter-spacing: 5px;
 }
+
+.container {
+  display: flex;
+  flex-direction: column;
+}
+
+.left-container {
+  order: 1;
+}
+
+.right-container {
+  order: 2;
+}
+
+@media (min-width: 768px) {
+  .container {
+    flex-direction: row;
+  }
+
+  .left-container {
+    width: 40%;
+  }
+
+  .right-container {
+    width: 60%;
+  }
+}

@@ -151,7 +151,7 @@ Search_btn.addEventListener("click", append_recent_search_li_element);
 
 
 function fetchWikipediaContent(characterName) {
-  const apiUrl = `https://en.wikipedia.org/w/api.php?action=query&format=json&prop=extracts&exintro&explaintext&redirects=1&titles=${encodeURIComponent(characterName)}`;
+  const apiUrl = `https://en.wikipedia.org/w/api.php?origin=*&action=query&format=json&prop=extracts&exintro&explaintext&redirects=1&titles=${encodeURIComponent(characterName)}`;
 
   fetch(apiUrl)
     .then(function(response) {
