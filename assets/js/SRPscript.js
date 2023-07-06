@@ -131,7 +131,7 @@ function Search_Comics(event) {
             currentComicImg.src = thumbnailUrl
             currentComicImg.alt = comic.title;
           } else {
-            currentComicImg.src = "/C:/Users/garwo/bootcamp/Marvel-Character-Browser/assets/images/dummy_550x834_ffffff_808080_comic-not-found.jpg"
+            currentComicImg.src = "./assets/images/dummy_550x834_ffffff_808080_comic-not-found.jpg"
             currentComicImg.alt = comic.title;
             console.log(currentComicImg.src)
           }
@@ -249,71 +249,3 @@ clearRecentBtn.addEventListener('click', function () {
     lastSearch.remove();
   });
 });
-
-
-// var publicKey;
-// var timestamp;
-// var apiUrl;
-
-
-
-// function fetchComicThumbnails(entry) {
-//   // Construct the API URL to fetch comics for the character
-//   var comicsUrl =
-//     "https://gateway.marvel.com/v1/public/characters?" +
-//     entry +
-//     "&limit=10&ts=1&apikey=09c6684b7cdacf3a0b97f764a489708f&hash=011be6f4c78340c4c4da9a1a4a713518";
-// console.log(entry);
-//   fetch(comicsUrl)
-//     .then(function (response) {
-//       if (!response.ok) {
-//         throw new Error("Failed to fetch comics for the character. Status: " + response.status);
-//       }
-//       return response.json();
-//     })
-//     .then(function (data) {
-//       console.log(data);
-//       if (!data.data || !data.data.results || data.data.results.length === 0) {
-//         throw new Error("No comics found for the character" + entry);
-//       }
-
-
-//       // Extract the comic data from the response
-//       var comicsData = data.data.results;
-
-//       // Clear the existing list items
-//       while (comics_list.firstChild) {
-//         comics_list.removeChild(comics_list.firstChild);
-//       }
-
-//       // Loop through the comic data and create list items with thumbnail images
-//       comicsData.forEach(function (comic) {
-//         var comicListItem = document.createElement("li");
-//         var comicTitle = document.createElement("span");
-//         var comicThumbnail = document.createElement("img");
-
-//         comicTitle.textContent = comic.title;
-
-//         if (comic.thumbnail && comic.thumbnail.path && comic.thumbnail.extension) {
-//           var thumbnailUrl = comic.thumbnail.path + "." + comic.thumbnail.extension;
-//           comicThumbnail.src = thumbnailUrl;
-//           comicThumbnail.alt = comic.title;
-//         } else {
-//           console.log("Missing thumbnail data for comic:", comic.title);
-//         }
-
-//         comicListItem.appendChild(comicThumbnail);
-//         comicListItem.appendChild(comicTitle);
-//         comics_list.appendChild(comicListItem);
-//       });
-//     })
-//     .catch(function (error) {
-//       console.log("Error fetching comic thumbnails:", error);
-//     });
-// }
-
-// // Assuming you have the entry value
-// var entry = "nameStartsWith=Spider-Man";
-
-// // Call fetchComicThumbnails with the entry
-// fetchComicThumbnails(entry);
